@@ -25,5 +25,5 @@ RUN REPEATABLE docker-compose build --parallel
 RUN docker-compose up -d
 
 # TODO: change port to whatever is configured in your docker-compose.yml
-EXPOSE WEBSITE http://localhost:8000 /api
+EXPOSE WEBSITE http://localhost:80 /api
 EXPOSE WEBSITE http://localhost:3000 /

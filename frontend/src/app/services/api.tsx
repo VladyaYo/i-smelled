@@ -1,10 +1,11 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 import { RootState } from '../store'
 const apiKey = process.env.REACT_APP_IP_API;
+const serverApi = process.env.SERVER_API;
 
 export const homeApi = createApi({
     reducerPath: 'home',
-    baseQuery: fetchBaseQuery({baseUrl: 'http://localhost:8000'}),
+    baseQuery: fetchBaseQuery({baseUrl: `${serverApi}`}),
     endpoints: (builder) => ({
         getContents: builder.query({
           query: () => `/home`,

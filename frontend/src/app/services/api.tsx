@@ -11,7 +11,7 @@ export const homeApi = createApi({
         }),
       }),
   });
-///4ea7e29660cf8e997eba646d5cf5736b
+
 export const locationApi = createApi({
     reducerPath: 'location',
     baseQuery: fetchBaseQuery({baseUrl: 'https://api.ipapi.com'}),

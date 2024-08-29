@@ -1,6 +1,6 @@
 import React from 'react';
 import { Breadcrumb, Layout, Menu, theme } from 'antd';
-import { useGetContentsQuery } from '../../app/services/api'
+import {useGetContentsQuery, useGetLocationQuery} from '../../app/services/api'
 
 const { Header, Content, Footer } = Layout;
 
@@ -11,7 +11,11 @@ const items = new Array(5).fill(null).map((_, index) => ({
 
 const Home: React.FC = () => {
   // @ts-ignore
-    const { data } = useGetContentsQuery();
+  const { data } = useGetContentsQuery();
+  // @ts-ignore
+//  const { data: location = {} } = useGetLocationQuery();
+
+
   const {
     token: { colorBgContainer, borderRadiusLG },
   } = theme.useToken();
